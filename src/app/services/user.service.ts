@@ -27,4 +27,15 @@ export class UserService {
   checkToken(){
     return this.httpClient.get(this.url+"/user/checkToken");
   }
+
+  getUser(){
+    return this.httpClient.get(this.url+"/user/get");
+  }
+
+  update(data:any){
+    return this.httpClient.post(this.url+
+      "/user/update", data, {
+      headers: new HttpHeaders().set('Content-Type', 'application/json')
+    })
+  }
 }

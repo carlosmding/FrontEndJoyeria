@@ -1,0 +1,47 @@
+<mat-card>
+    <b><span>Gestión de Usuarios</span></b>
+</mat-card>
+<hr>
+<mat-card>
+    <mat-form-field appearance="standard">
+        <mat-label>Filtro</mat-label>
+        <input matInput (keyup)="applyFilter($event)" #input>
+    </mat-form-field>
+</mat-card>
+<hr>
+
+<div class="responsive_table">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef>Id</th>
+            <th mat-cell *matCellDef="let element">{{element.id}}</th>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef>Nombre</th>
+            <th mat-cell *matCellDef="let element">{{element.name}}</th>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef>Email</th>
+            <th mat-cell *matCellDef="let element">{{element.email}}</th>
+        </ng-container>
+        
+        <ng-container matColumnDef="contactNumber">
+            <th mat-header-cell *matHeaderCellDef>Número de contacto</th>
+            <th mat-cell *matCellDef="let element">{{element.contactNumber}}</th>
+        </ng-container>
+
+        <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef>Estado</th>
+            <th mat-cell *matCellDef="let element" class="action-link">
+                <mat-slide-toggle (change)="onChange($event.checked, element.id)" matTooltip="Activar o Desactivar Usuario"
+                    [checked]="element.status"></mat-slide-toggle>
+            </th>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns;sticky:true"></tr>
+        <tr mat-row *matRowDef="let row;columns:displayedColumns"></tr>
+
+    </table>
+</div>

@@ -1,0 +1,44 @@
+<body>
+    <mat-card>
+        <b><span>Tablero</span></b>
+    </mat-card>
+    <br>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <div class="container">
+                    <h2 class="title">Total Categorias</h2>
+                    <h1 class="title">{{data?.category}}</h1>
+                    <p><button class="button" [routerLink]="['/cafe/category']">Ver categorias</button></p>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <div class="container">
+                    <h2 class="title">Total Productos</h2>
+                    <h1 class="title">{{data?.product}}</h1>
+                    <p><button class="button" [routerLink]="['/cafe/product']">Ver productos</button></p>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <div class="container">
+                    <h2 class="title">Total Pedidos</h2>
+                    <h1 class="title">{{data?.orders}}</h1>
+                    <p><button class="button" [routerLink]="['/cafe/order']">Ver productos</button></p>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</body>

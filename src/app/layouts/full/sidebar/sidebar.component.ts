@@ -1,7 +1,7 @@
 import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { MenuItems } from 'src/app/shared/menu-items';
-import jwtDecode from 'jwt-decode';
+import {jwtDecode} from 'jwt-decode';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',

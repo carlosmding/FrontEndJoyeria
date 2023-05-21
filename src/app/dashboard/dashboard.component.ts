@@ -15,7 +15,8 @@ export class DashboardComponent implements AfterViewInit {
 	ngAfterViewInit() { }
 
 	constructor(private dashboardService: DashboardService,
-		private snackbarService: SnackbarService,) {
+		//private ngxService:NgxUiloaderService,
+		private snackbarService: SnackbarService) {
 		this.dashboardData();
 	}
 

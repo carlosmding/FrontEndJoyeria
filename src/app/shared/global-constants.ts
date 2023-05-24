@@ -3,6 +3,12 @@ export class GlobalConstants{
     public static genericError:string="No se pudo procesar, por favor intentelo de nuevo más tarde";
 
     public static unauthroized:string ="Acceso no autorizado";
+
+    public static productExistError:string = "Producto ya existe";
+
+    public static productAdded:string ="Producto agregado correctamente";
+
+
     //Regex
     public static nameRegex:string= "[a-zA-Z0-9 ]*";
 

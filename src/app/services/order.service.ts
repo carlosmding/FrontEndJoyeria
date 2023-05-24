@@ -28,4 +28,12 @@ export class OrderService {
     return this.httpClient.get(this.url+ "/order/getOrders")
   }
 
+  delete(id:any){
+    return this.httpClient.post(this.url+
+      "/order/delete/"+id, {
+      headers: new HttpHeaders().set('Content-Type', 'application/json')
+    })
+  }
+  
+
 }
